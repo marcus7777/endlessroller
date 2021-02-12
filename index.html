@@ -412,7 +412,9 @@ function doTreeLogic(){
         heroSphere.scale.y = heroScale
         heroSphere.scale.z = heroScale
         if (heroScale < minSize) {
-          heroScale = .1
+          heroScale = .1 
+          let topS = localStorage.getItem("topS")
+          localStorage.setItem(Math.max(rollingGroundSphere.rotation.x, topS))
           rollingGroundSphere.rotation.x = 0
         }
       }
