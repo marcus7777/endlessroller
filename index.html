@@ -370,11 +370,13 @@ function update(){
       heroScale *= 1.017
       if (heroScale > maxSize) {
         heroScale = .1
+        rollingGroundSphere.rotation.x = 0
       }
       heroSphere.scale.x = heroScale
       heroSphere.scale.y = heroScale
       heroSphere.scale.z = heroScale
     }
+    document.title = "going "+rollingGroundSphere.rotation.x
     heroSphere.position.y+=bounceValue
     heroSphere.position.x=THREE.Math.lerp(heroSphere.position.x,currentLane, 2*clock.getDelta());//clock.getElapsedTime())
     bounceValue-=gravity
