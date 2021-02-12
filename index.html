@@ -371,7 +371,7 @@ function update(){
       if (heroScale > maxSize) {
         heroScale = .1
         let topS = localStorage.getItem("topS")
-        localStorage.setItem(Math.max(rollingGroundSphere.rotation.x, topS))
+        localStorage.setItem("topS", Math.max(rollingGroundSphere.rotation.x, topS))
         rollingGroundSphere.rotation.x = 0
       }
       heroSphere.scale.x = heroScale
@@ -414,7 +414,7 @@ function doTreeLogic(){
         if (heroScale < minSize) {
           heroScale = .1 
           let topS = localStorage.getItem("topS")
-          localStorage.setItem(Math.max(rollingGroundSphere.rotation.x, topS))
+          localStorage.setItem("topS", Math.max(rollingGroundSphere.rotation.x, topS))
           rollingGroundSphere.rotation.x = 0
         }
       }
