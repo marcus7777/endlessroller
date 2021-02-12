@@ -378,7 +378,7 @@ function update(){
       heroSphere.scale.y = heroScale
       heroSphere.scale.z = heroScale
     }
-    let topS = " Got " = localStorage.getItem("topS")
+    let topS = " Got " + localStorage.getItem("topS")
     document.title = "Going " + rollingGroundSphere.rotation.x + topS
     heroSphere.position.y+=bounceValue
     heroSphere.position.x=THREE.Math.lerp(heroSphere.position.x,currentLane, 2*clock.getDelta());//clock.getElapsedTime())
